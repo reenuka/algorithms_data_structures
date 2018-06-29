@@ -32,15 +32,15 @@ function minimumBribes(q) {
 
     // --- ATTEMPT 2 ---
     // declare bribe counting var
-    let bribes = 0;
+    let bribes;
     // iterate over queue
-    for (let i = 0; i < q.length - 1; i++) {
+    for (let i = 0; i < q.length; i++) {
         // if difference between number and its index is greater than 3
         if (Math.abs(q[i] - i) > 3) {
             // return "Too chaotic"
             return 'Too chaotic';
         } else {
-            
+            // ????????????????????????????????????????????
         }
     }
 
