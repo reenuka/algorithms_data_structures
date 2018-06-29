@@ -10,23 +10,43 @@
 // E: invalid number of bribes (shifts) => print "Too chaotic"
 
 function minimumBribes(q) {
+
+    // --- ATTEMPT 1 ---
+    // // declare bribe counting var
+    // let bribes = 0;
+    // // iterate over queue
+    // for (let i = 0; i < q.length; i++) {
+    //     // if difference between number and its index is greater than 3
+    //     if (Math.abs(q[i] - i) > 3) {
+    //         // return "Too chaotic"
+    //         return 'Too chaotic';
+    //     } else {
+    //         // otherwise increment bribes by difference
+    //         let difference = q[i] - (i + 1);
+    //         bribes += (difference > 0 ) ? difference : 0;
+    //     }
+    // }
+    // // return bribes
+    // return bribes;
+
+
+    // --- ATTEMPT 2 ---
     // declare bribe counting var
     let bribes = 0;
     // iterate over queue
-    for (let i = 0; i < q.length; i++) {
+    for (let i = 0; i < q.length - 1; i++) {
         // if difference between number and its index is greater than 3
-        if (q[i] - i > 3) {
+        if (Math.abs(q[i] - i) > 3) {
             // return "Too chaotic"
             return 'Too chaotic';
+        } else {
+            
         }
-        // otherwise increment bribes by difference
-        let difference = q[i] - (i + 1);
-        bribes += (difference > 0) ? difference : 0;
     }
-    // return bribes
+
     return bribes;
 }
 
-const test = [2, 5, 1, 3, 4];
+const test = [1, 2, 5, 3, 7, 8, 6, 4];
 
 console.log(minimumBribes(test));
